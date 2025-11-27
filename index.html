@@ -12,8 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
       rel="stylesheet"
     />
-    <!-- JavaScript -->
-    <script src="script.js" type="module"></script>
     <title>Restaurant Ordering App</title>
   </head>
   <body>
@@ -21,6 +19,36 @@
       <h1>Jimmy's Diner</h1>
       <h3>The best burgers and pizzas in town.</h3>
     </header>
-    <section id="menu-container"></section> 
+    <section id="menu-container"></section>
+    <section id="order-summary">
+      <div class="order-summary-flex">
+        <h3 class="order-summary-header">Your Order</h3>
+        <div class="total-flex">
+          <p class="order-summary-total">Total</p>
+          <p class="order-summary-amount">$0</p>
+        </div>
+        <button class="complete-order-btn" id="order-btn">
+          Complete Order
+        </button>
+      </div>
+    </section>
+    <!-- JavaScript -->
+    <script src="script.js" type="module"></script>
+    <div class="modal" id="order-modal">
+      <form id="order-form">
+        <h2>Enter card details</h2>
+        <input type="text" placeholder="Enter your name" required />
+        <input
+          type="text"
+          placeholder="Enter card number"
+          id="card-number-input"
+          maxlength="19"
+          required
+        />
+        <input type="text" placeholder="Enter CVV" required maxlength="3" />
+        <button type="submit" id="pay-btn">Pay</button>
+      </form>
+    </div>
+    <div class="thank-you">hdsffsd</div>
   </body>
 </html>

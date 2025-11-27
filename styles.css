@@ -1,15 +1,18 @@
 body {
   margin: 0;
+  color: black;
+  font-family: "Smythe", sans-serif;
+  font-size: 16px;
 }
 
 header {
   background-image: url(assets/header.png);
-  font-family: "Smythe", sans-serif;
   color: white;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 1rem;
+  padding: 0;
+  margin: 0;
   height: 150px;
 }
 
@@ -17,8 +20,245 @@ header h1,
 header h3 {
   margin-block: 4px;
   margin-left: 1rem;
+  margin: 0;
+  padding: 2rem;
 }
 
 header h1 {
-  margin-top: 2rem;
+  font-size: 2.5rem;
+  padding-bottom: 0;
+}
+
+header h3 {
+  padding-top: 0;
+}
+
+#menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-item {
+  padding: 1rem;
+  width: 320px;
+  display: flex;
+  align-items: center;
+  border-bottom: #b8b8b8 1px solid;
+}
+
+.menu-emoji {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+.add-to-order-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: #fff;
+  outline: transparent;
+  color: #3c3c3c;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.add-to-order-btn img {
+  width: 30px;
+}
+
+.menu-ing {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 3px 0;
+}
+
+.menu-name {
+  margin: 0;
+  font-size: 1.7rem;
+}
+.menu-price {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.order-summary {
+  width: 320px;
+}
+
+.order-summary-header {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.order-item {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  padding-block: 5px;
+  font-size: 1.5rem;
+}
+
+.order-summary-total {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.order-summary-flex {
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  padding: 0;
+  width: 320px;
+}
+
+.total-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0 0 0;
+  padding: 0;
+  border-top: #000 2px solid;
+  height: min-content;
+}
+
+.total-flex p {
+  margin: 5px 0 0 0;
+}
+
+.order-summary-amount {
+  text-align: right;
+  width: 100%;
+  display: block;
+}
+
+.order-item-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-item-flex p {
+  margin-block: 0;
+}
+
+.remove {
+  cursor: pointer;
+  font-size: 0.5rem;
+  padding-left: 5px;
+  color: #bbbbbb;
+  text-shadow: #cfcfcf 0px 0px 1px;
+  align-self: flex-end;
+  padding-bottom: 8px;
+  font-size: 1rem;
+}
+
+.order-item-price {
+  margin-left: auto;
+  padding-right: 10px;
+}
+
+.amount {
+  padding-left: 10px;
+  color: #16db99;
+  text-shadow: #16db99 0px 0px 10px;
+}
+
+.complete-order-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #16db99;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 3px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.modal form {
+  background-color: #fff;
+  padding: 32px 24px 24px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 320px;
+  align-items: stretch;
+}
+
+.modal form h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.modal form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.modal form input:focus {
+  border-color: #16db99;
+}
+
+.modal form button[type="submit"] {
+  background-color: #16db99;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.modal form button[type="submit"]:hover {
+  background-color: #13c88b;
+}
+
+.thank-you {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  background-color: #ecfdf5;
+  width: 320px;
+  margin: 45px auto auto auto;
+  color: #065f46;
+  padding: 2rem;
+  border-radius: 3px;
+  visibility: hidden;
 }
