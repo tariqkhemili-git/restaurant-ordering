@@ -3,6 +3,7 @@
 A simple, interactive restaurant ordering web app built with vanilla JavaScript, HTML, and CSS. Users can browse a menu, add items to their order, view a dynamic order summary, and complete their purchase with a modal payment form.
 
 ## Features
+
 - Menu rendered from a JS array
 - Add/remove items to/from order
 - Dynamic order summary with item counts and total price
@@ -11,6 +12,7 @@ A simple, interactive restaurant ordering web app built with vanilla JavaScript,
 - Responsive, modern UI
 
 ## Getting Started
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/restaurant-ordering.git
@@ -18,6 +20,7 @@ A simple, interactive restaurant ordering web app built with vanilla JavaScript,
 2. Open `index.html` in your browser.
 
 ## Project Structure
+
 - `index.html` - Main HTML file
 - `styles.css` - App styles
 - `menuArr.js` - Menu data
@@ -25,8 +28,10 @@ A simple, interactive restaurant ordering web app built with vanilla JavaScript,
 - `assets/` - Images and icons
 
 ## Customization
+
 - Edit `menuArr.js` to change menu items.
 - Update styles in `styles.css` for branding.
 
 ## License
+
 MIT
