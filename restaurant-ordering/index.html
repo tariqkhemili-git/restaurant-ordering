@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="src/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
+            rel="stylesheet"
+        />
+        <script src="src/script.js" type="module"></script>
+        <title>Restaurant Ordering App</title>
+    </head>
+    <body>
+        <!-- Restaurant branding and hero section -->
+        <header>
+            <h1 class="title">Jimmy's Diner</h1>
+            <h3 class="subtitle">The best burgers and pizzas in town.</h3>
+        </header>
+
+        <!-- Menu items dynamically rendered via JavaScript -->
+        <section id="menu-container"></section>
+
+        <!-- Shopping cart and checkout section -->
+        <section id="order-summary">
+            <div class="order-summary-flex">
+                <h3 class="order-summary-header">Your Order</h3>
+                <div class="total-flex">
+                    <p class="order-summary-total">Total</p>
+                    <p class="order-summary-amount">$0</p>
+                </div>
+                <button class="complete-order-btn" id="order-btn">
+                    Complete Order
+                </button>
+            </div>
+        </section>
+
+        <!-- Payment modal overlay - hidden by default -->
+        <div class="modal" id="order-modal">
+            <form id="order-form">
+                <h2>Enter card details</h2>
+                <input type="text" placeholder="Enter your name" id="name-input" required />
+                <!-- Card number with auto-formatting (spaces every 4 digits) -->
+                <input
+                    type="text"
+                    placeholder="Enter card number"
+                    id="card-number-input"
+                    maxlength="19"
+                    required
+                />
+                <input
+                    type="text"
+                    placeholder="Enter CVV"
+                    id="cvv-input"
+                    required
+                    maxlength="3"
+                />
+                <button type="submit" id="pay-btn">Pay</button>
+            </form>
+        </div>
+
+        <!-- Order confirmation message - shown after successful payment -->
+        <div class="thank-you">hdsffsd</div>
+    </body>
+</html>
